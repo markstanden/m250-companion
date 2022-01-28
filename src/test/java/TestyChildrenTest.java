@@ -28,18 +28,6 @@ class TestyChildrenTest {
                 .forEach(i -> testData.add(i));
 
         tc = new TestyChildren();
-        HashSet<String> one = new HashSet<>();
-        one.add("John");
-        one.add("Steve");
-        one.add("Scott");
-        one.add("Nick");
-        tc.children.put(1, one);
-
-        HashSet<String> two = new HashSet<>();
-        two.add("Andy");
-        two.add("Jim");
-        two.add("Alex");
-        tc.children.put(2, two);
 
         HashSet<String> three = new HashSet<>();
         three.add("Brian");
@@ -57,7 +45,55 @@ class TestyChildrenTest {
     }
 
     @Test
-    void moreThan3Children() {
+    void moreThan3ChildrenTwo() {
+        HashSet<String> one = new HashSet<>();
+        one.add("John");
+        one.add("Steve");
+        one.add("Scott");
+        one.add("Nick");
+        tc.children.put(1, one);
 
+        HashSet<String> two = new HashSet<>();
+        two.add("Andy");
+        two.add("Jim");
+        two.add("Alex");
+        tc.children.put(2, two);
+
+       tc.moreThan3Children();
+
+        assertEquals("2 houses have three or more children\n", console.toString());
+    }
+
+    @Test
+    void moreThan3ChildrenOneThree() {
+        HashSet<String> two = new HashSet<>();
+        two.add("Andy");
+        two.add("Jim");
+        two.add("Alex");
+        tc.children.put(2, two);
+
+        tc.moreThan3Children();
+
+        assertEquals("1 houses have three or more children\n", console.toString());
+    }
+
+    @Test
+    void moreThan3ChildrenOneFour() {
+        HashSet<String> two = new HashSet<>();
+        two.add("Andy");
+        two.add("Jim");
+        two.add("Alex");
+        tc.children.put(2, two);
+
+        tc.moreThan3Children();
+
+        assertEquals("1 houses have three or more children\n", console.toString());
+    }
+
+    @Test
+    void moreThan3ChildrenNone() {
+        tc.moreThan3Children();
+
+        assertEquals("No houses have three or more children\n", console.toString());
     }
 }
