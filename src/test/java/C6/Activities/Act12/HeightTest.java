@@ -1,6 +1,7 @@
-package C6.Activities;
+package C6.Activities.Act12;
 
 import BaseTests.ConsoleTest;
+import C6.Activities.Act12.Height;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;

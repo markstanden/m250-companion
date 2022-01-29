@@ -15,7 +15,7 @@ public abstract class ConsoleTest {
     protected String getStrippedConsole() {
         return console.toString().stripTrailing();
     }
-    
+
     protected Stream<String> consoleToStream() {
         return console.toString().lines();
     }
