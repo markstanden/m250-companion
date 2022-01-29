@@ -1,26 +1,19 @@
+import BaseTests.ConsoleTest;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-import java.io.ByteArrayOutputStream;
-import java.io.PrintStream;
 import java.util.HashSet;
 import java.util.stream.Stream;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-class TestyChildrenTest {
+class TestyChildrenTest extends ConsoleTest {
 
-
-    ByteArrayOutputStream console;
     TestyChildren tc;
 
     @BeforeEach
     public void setUp() {
-        /* Redirect the stdout to our printstream
-         * to monitor console output. */
-        console = new ByteArrayOutputStream();
-        PrintStream ps = new PrintStream(console);
-        System.setOut(ps);
+        super.setUp();
 
         HashSet<Integer> testData = new HashSet<>();
         Stream.iterate(1, x -> x + 1)
@@ -59,7 +52,7 @@ class TestyChildrenTest {
         two.add("Alex");
         tc.children.put(2, two);
 
-       tc.moreThan3Children();
+        tc.moreThan3Children();
 
         assertEquals("2 houses have three or more children\n", console.toString());
     }

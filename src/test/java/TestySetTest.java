@@ -1,27 +1,18 @@
+import BaseTests.ConsoleTest;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-import java.io.ByteArrayOutputStream;
-import java.io.PrintStream;
-import java.util.Collections;
-import java.util.Enumeration;
 import java.util.HashSet;
 import java.util.stream.Stream;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-class TestySetTest {
-
-    ByteArrayOutputStream console;
+class TestySetTest extends ConsoleTest {
     TestySet ts;
 
     @BeforeEach
     public void setUp() {
-        /* Redirect the stdout to our printstream
-         * to monitor console output. */
-        console = new ByteArrayOutputStream();
-        PrintStream ps = new PrintStream(console);
-        System.setOut(ps);
+        super.setUp();
 
         HashSet<Integer> testData = new HashSet<>();
         Stream.iterate(1, x -> x + 1)

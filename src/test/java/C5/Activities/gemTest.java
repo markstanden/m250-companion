@@ -3,16 +3,13 @@ package C5.Activities;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-// To capture stdout
-import java.io.ByteArrayOutputStream;
-import java.io.PrintStream;
 import java.util.ArrayList;
 import java.util.List;
+import BaseTests.ConsoleTest;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-public class gemTest {
-    private ByteArrayOutputStream console;
+public class gemTest extends ConsoleTest {
 
      private List<Gem> gems;
      private Solution solution;
@@ -20,11 +17,7 @@ public class gemTest {
     @BeforeEach
     public void setUp()
     {
-        /* Redirect the stdout to our printstream
-         * to monitor console output. */
-        console = new ByteArrayOutputStream();
-        PrintStream ps = new PrintStream(console);
-        System.setOut(ps);
+        super.setUp();
 
         gems = new ArrayList<Gem>();
         gems.add(new Gem("ruby", "red", 1.0));

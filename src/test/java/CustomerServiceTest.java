@@ -1,23 +1,9 @@
-import org.junit.jupiter.api.BeforeEach;
+import BaseTests.ConsoleTest;
 import org.junit.jupiter.api.Test;
-
-import java.io.ByteArrayOutputStream;
-import java.io.PrintStream;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-class CustomerServiceTest {
-
-    ByteArrayOutputStream console;
-
-    @BeforeEach
-    public void setUp() {
-        /* Redirect the stdout to our printstream
-         * to monitor console output. */
-        console = new ByteArrayOutputStream();
-        PrintStream ps = new PrintStream(console);
-        System.setOut(ps);
-    }
+class CustomerServiceTest extends ConsoleTest {
 
     @Test
     void printNamesInvoicesPennyMoreThanHighest() {
