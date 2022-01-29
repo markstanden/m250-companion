@@ -4,6 +4,7 @@ import org.junit.jupiter.api.BeforeEach;
 
 import java.io.ByteArrayOutputStream;
 import java.io.PrintStream;
+import java.util.stream.Stream;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
@@ -13,6 +14,10 @@ public abstract class ConsoleTest {
 
     protected String getStrippedConsole() {
         return console.toString().stripTrailing();
+    }
+    
+    protected Stream<String> consoleToStream() {
+        return console.toString().lines();
     }
 
     @BeforeEach
