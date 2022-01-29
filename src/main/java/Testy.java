@@ -1,6 +1,3 @@
-import java.sql.SQLOutput;
-import java.util.Locale;
-
 public class Testy
 {
     // Write your smallString(String) method here.
