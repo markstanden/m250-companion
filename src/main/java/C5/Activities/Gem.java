@@ -1,3 +1,5 @@
+package C5.Activities;
+
 public class Gem
 {
     private String kind;     // The kind of gem.

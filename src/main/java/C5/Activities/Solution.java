@@ -1,14 +1,13 @@
-import java.util.List;
-import java.util.stream.Collectors;
+package C5.Activities;
 
-public class Solution
-{
+import java.util.List;
+
+public class Solution {
 
     /**
-     *  Print out the first four gems that are not diamonds
+     * Print out the first four gems that are not diamonds
      **/
-    public void printNonDiamonds(List<Gem> gems)
-    {
+    public void printNonDiamonds(List<Gem> gems) {
         // Write code below which will
         // (1) Create a stream from the list gems
         // (2) Use a filter operation to select only
@@ -25,8 +24,7 @@ public class Solution
      * Return the number of blue or green gems
      * in the received list of gems
      */
-    public long getNumberOfBlueOrGreen(List<Gem> gems)
-    {
+    public long getNumberOfBlueOrGreen(List<Gem> gems) {
         // Write code below which will
         // (1) Create a stream from the list gems
         // (2) Use a filter operation to select only the
@@ -45,8 +43,7 @@ public class Solution
      * Returns the total weight of all Gems in the gems
      * list of a particular kind
      */
-    public double getTotalWeightOfKind(List<Gem> gems, String kind)
-    {
+    public double getTotalWeightOfKind(List<Gem> gems, String kind) {
         // Write code below which will
         // (1) Create a stream from the list gems
         // (2) Filter to select only the gems of the given kind
@@ -62,8 +59,7 @@ public class Solution
         return result;
     }
 
-    public void printNonRubyWeights(List<Gem> gems)
-    {
+    public void printNonRubyWeights(List<Gem> gems) {
         // Write code below to
         // (1) Create a stream from the list gems
         // (2) Filter to select gems whose kind is NOT "ruby"
@@ -75,13 +71,12 @@ public class Solution
                 .forEach(gem -> System.out.println(gem));
     }
 
-    public void printRedGems(List<Gem> gems)
-    {
+    public void printRedGems(List<Gem> gems) {
         // Write code below to
         // (1) Create a stream from the list of Gems
         // (2) Use a filter operation to select only the Gems with colour
         // equal to "red"
-        // (3) Print out each Gem in the filtered list
+        // (3) Print out each C5.Act7.Gem in the filtered list
         gems.stream()
                 .filter(gem -> gem.getColour().equals("red"))
                 .forEach(gem -> System.out.println(gem));
