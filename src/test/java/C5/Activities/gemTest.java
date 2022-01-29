@@ -5,18 +5,18 @@ import org.junit.jupiter.api.Test;
 
 import java.util.ArrayList;
 import java.util.List;
+
 import BaseTests.ConsoleTest;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class gemTest extends ConsoleTest {
 
-     private List<Gem> gems;
-     private Solution solution;
+    private List<Gem> gems;
+    private Solution solution;
 
     @BeforeEach
-    public void setUp()
-    {
+    public void setUp() {
         super.setUp();
 
         gems = new ArrayList<Gem>();
@@ -40,7 +40,7 @@ public class gemTest extends ConsoleTest {
         assertEquals("ruby, colour = red, weight = 1.0\n" +
                 "ruby, colour = pink, weight = 2.0\n" +
                 "ruby, colour = clear, weight = 3.0\n" +
-                "sapphire, colour = blue, weight = 2.0\n", console.toString());
+                "sapphire, colour = blue, weight = 2.0", getStrippedConsole());
     }
 
     @Test
@@ -64,15 +64,15 @@ public class gemTest extends ConsoleTest {
     @Test
     public void nonRubyGemTest() {
         solution.printNonRubyWeights(gems);
-        assertEquals("2.0\n4.0\n2.0\n2.0\n5.0\n0.01\n0.01\n", console.toString());
+        assertEquals("2.0\n4.0\n2.0\n2.0\n5.0\n0.01\n0.01", getStrippedConsole());
     }
 
     @Test
-    public void redGemTest(){
+    public void redGemTest() {
         solution.printRedGems(gems);
         assertEquals("ruby, colour = red, weight = 1.0\n" +
                 "brick, colour = red, weight = 5.0\n" +
-                "lips, colour = red, weight = 0.01\n", console.toString());
+                "lips, colour = red, weight = 0.01", getStrippedConsole());
     }
 }
 

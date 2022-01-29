@@ -8,20 +8,20 @@ class TestyTest extends ConsoleTest {
     void cat() {
         Testy t = new Testy();
         t.smallString("   CAT   ");
-        assertEquals("a\n", console.toString(), "cat");
+        assertEquals("a", getStrippedConsole(), "cat");
     }
 
     @Test
     void elephant() {
         Testy t = new Testy();
         t.smallString(" ELEPHANT ");
-        assertEquals("lephan\n", console.toString(), "elephant");
+        assertEquals("lephan", getStrippedConsole(), "elephant");
     }
 
     @Test
     void be() {
         Testy t = new Testy();
         t.smallString("  BE  ");
-        assertEquals("String too short\n", console.toString(), "cat");
+        assertEquals("String too short", getStrippedConsole(), "cat");
     }
 }

@@ -54,7 +54,7 @@ class TestyChildrenTest extends ConsoleTest {
 
         tc.moreThan3Children();
 
-        assertEquals("2 houses have three or more children\n", console.toString());
+        assertEquals("2 houses have three or more children", getStrippedConsole());
     }
 
     @Test
@@ -67,7 +67,7 @@ class TestyChildrenTest extends ConsoleTest {
 
         tc.moreThan3Children();
 
-        assertEquals("1 houses have three or more children\n", console.toString());
+        assertEquals("1 houses have three or more children", getStrippedConsole());
     }
 
     @Test
@@ -80,13 +80,13 @@ class TestyChildrenTest extends ConsoleTest {
 
         tc.moreThan3Children();
 
-        assertEquals("1 houses have three or more children\n", console.toString());
+        assertEquals("1 houses have three or more children", getStrippedConsole());
     }
 
     @Test
     void moreThan3ChildrenNone() {
         tc.moreThan3Children();
 
-        assertEquals("No houses have three or more children\n", console.toString());
+        assertEquals("No houses have three or more children", getStrippedConsole());
     }
 }

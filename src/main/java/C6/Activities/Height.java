@@ -10,6 +10,6 @@ public class Height {
 
     // Write your choose(int) method here
     public void choose(int aHeight){
-
+        System.out.println(aHeight < height ? "Less than height" : "Greater than or equal to height");
     }
 }

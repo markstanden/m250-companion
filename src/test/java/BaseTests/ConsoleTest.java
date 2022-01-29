@@ -1,18 +1,19 @@
 package BaseTests;
 
 import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.Test;
 
 import java.io.ByteArrayOutputStream;
 import java.io.PrintStream;
-import java.util.HashSet;
-import java.util.stream.Stream;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-public class ConsoleTest {
+public abstract class ConsoleTest {
 
-    protected ByteArrayOutputStream console;
+    private ByteArrayOutputStream console;
+
+    protected String getStrippedConsole() {
+        return console.toString().stripTrailing();
+    }
 
     @BeforeEach
     public void setUp() {

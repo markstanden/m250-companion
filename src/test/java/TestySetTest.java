@@ -25,24 +25,24 @@ class TestySetTest extends ConsoleTest {
     @Test
     void findSumOfValuesMoreThan99() {
         ts.findSumOfValuesMoreThan(99);
-        assertEquals(100 + "\n", console.toString());
+        assertEquals(100, getStrippedConsole());
     }
 
     @Test
     void findSumOfValuesMoreThan98() {
         ts.findSumOfValuesMoreThan(98);
-        assertEquals(199 + "\n", console.toString());
+        assertEquals(199, getStrippedConsole());
     }
 
     @Test
     void findSumOfValuesMoreThan100() {
         ts.findSumOfValuesMoreThan(100);
-        assertEquals("none found\n", console.toString());
+        assertEquals("none found", getStrippedConsole());
     }
 
     @Test
     void findSumOfValuesMoreThan0() {
         ts.findSumOfValuesMoreThan(0);
-        assertEquals("5050\n", console.toString());
+        assertEquals("5050", getStrippedConsole());
     }
 }

@@ -44,9 +44,9 @@ public class timesTableTest extends ConsoleTest {
                 "9 x 4 = 36\n" +
                 "10 x 4 = 40\n" +
                 "11 x 4 = 44\n" +
-                "12 x 4 = 48\n";
+                "12 x 4 = 48";
         times.printTimesTable();
-        assertEquals(expectedOutput, console.toString());
+        assertEquals(expectedOutput, getStrippedConsole());
     }
 
 }

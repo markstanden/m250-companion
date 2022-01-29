@@ -16,12 +16,12 @@ public class namesTest extends ConsoleTest {
     @Test
     public void printTeamNamesTest() {
         kabaddi.printTeamSurnames("Name1 Surname1, Name2 Surname2, Name3 Surname3");
-        assertEquals("Surname1\nSurname2\nSurname3\n", console.toString());
+        assertEquals("Surname1\nSurname2\nSurname3", getStrippedConsole());
     }
 
     @Test
     public void printTeamNamesFunTest() {
         kabaddi.printTeamSurnamesFun("Name1 Surname1, Name2 Surname2, Name3 Surname3");
-        assertEquals("Surname1\nSurname2\nSurname3\n", console.toString());
+        assertEquals("Surname1\nSurname2\nSurname3", getStrippedConsole());
     }
 }
