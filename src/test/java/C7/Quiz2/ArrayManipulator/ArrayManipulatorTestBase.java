@@ -1,4 +1,4 @@
-package C7.Quiz2;
+package C7.Quiz2.ArrayManipulator;
 
 import BaseTests.ConsoleTest;
 

@@ -1,8 +1,8 @@
-package C7.Quiz2;
+package C7.Quiz2.EmailManager;
 
 public class EmailManager
 {
-    private int[][] emails;
+    private final int[][] emails;
 
     public EmailManager(int[][] anArray)
     {
@@ -23,6 +23,21 @@ public class EmailManager
     public void emailsOnDay(int aDay, int aWeek){
         int quantity = emails[aWeek][aDay];
         System.out.printf("The number of emails received on Day %d of Week %d is %d\n", aDay + 1, aWeek + 1, quantity);
+    }
+
+    /**
+     * prints out the number of emails received in each week,
+     * labelled with the week number.
+     *
+     * Output in this format, with one line of output per week:
+     *
+     * Week 1: 23
+     * Week 2: 13
+     * Week 3: 25
+     */
+    public void weeklyEmails(){
+        
+        System.out.printf("Week %d: %d\n",1,23);
     }
 
 }
