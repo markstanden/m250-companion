@@ -1,4 +1,4 @@
-package C7.Q2;
+package C7.Quiz2;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;

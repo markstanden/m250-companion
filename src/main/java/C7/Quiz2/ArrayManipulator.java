@@ -1,4 +1,5 @@
-package C7.Q2;
+package C7.Quiz2;
+import java.util.stream.Stream;
 
 public class ArrayManipulator {
     private int[][] myArray;
@@ -19,8 +20,18 @@ public class ArrayManipulator {
      * @param aRow
      */
     public void printARowBetween(int anIndex, int anotherIndex, int aRow) {
-        //OU will use array[Row][Column]
+        if (aRow >= myArray.length || anotherIndex >= myArray[aRow].length || anotherIndex < anIndex) {
+            System.out.println("Invalid parameter");
+            return;
+        }
 
+        //array[Row][Column]
+        String output = Stream.iterate(anIndex, i -> i + 1)
+                .limit(anotherIndex - anIndex + 1)
+                .map(index -> myArray[aRow][index])
+                .map(value -> value.toString())
+                .reduce("", (out, value) -> out.concat(" ").concat(value));
 
+        System.out.println(output.trim());
     }
 }

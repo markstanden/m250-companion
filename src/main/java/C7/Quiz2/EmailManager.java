@@ -1,6 +1,4 @@
-package C7.Q2;
-
-import java.util.Arrays;
+package C7.Quiz2;
 
 public class EmailManager
 {

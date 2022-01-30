@@ -43,8 +43,9 @@ public class L33tNameGenerator {
 
 
     private int rand(int number) {
-        return rand.nextInt(1,4);
+        return rand.nextInt(1,3);
     }
+
 
 
 
