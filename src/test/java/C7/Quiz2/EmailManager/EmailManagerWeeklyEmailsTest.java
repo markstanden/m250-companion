@@ -10,13 +10,14 @@ public class EmailManagerWeeklyEmailsTest extends EmailManagerTest{
     public void ouData(){
         EmailManager em = new EmailManager(ouEmails);
         em.weeklyEmails();
-        assertEquals("Week 1: 32\nWeek 2: 23\nWeek 3: 28\nWeek 4: 17", getStrippedConsole());
+        assertEquals("Week 1: 32\nWeek 2: 23\nWeek 3: 26\nWeek 4: 17", getStrippedConsole());
     }
 
     @Test
     public void withZeros(){
-        int[][] empty = new int[1][7];
-        EmailManager em = new EmailManager(empty);
+        int[][] emptyish = new int[1][7];
+        emptyish[0][0] = 0;
+        EmailManager em = new EmailManager(emptyish);
         em.weeklyEmails();
         assertEquals("Week 1: 0", getStrippedConsole());
     }
