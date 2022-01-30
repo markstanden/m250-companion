@@ -1,20 +1,10 @@
 package C7.Quiz2;
 
-import BaseTests.ConsoleTest;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-class ArrayManipulatorTest extends ConsoleTest {
-
-    private final int[][] FIVE_BY_SIX = new int[][]{{ 1, 2, 3, 4, 5, 6},
-                                                    { 7, 8, 9,10,11,12},
-                                                    {13,14,15,16,17,18},
-                                                    {19,20,21,22,23,24},
-                                                    {25,26,27,28,29,30}};
-    private final ArrayManipulator AM = new ArrayManipulator(FIVE_BY_SIX);
-    private final String ERROR = "Invalid parameter";
-
+class ArrayManipulatorRowBetweenTest extends ArrayManipulatorTestBase {
 
     /*
     The method should print out the elements in the row of myArray given by aRow,
@@ -27,7 +17,7 @@ class ArrayManipulatorTest extends ConsoleTest {
 
     Use array[Row][Column]
     */
-    
+
     @Test
     void printARowBetweenFirstElement() {
         AM.printARowBetween(0,0, 0);
@@ -36,45 +26,45 @@ class ArrayManipulatorTest extends ConsoleTest {
 
     @Test
     void printARowBetweenLastElement() {
-        AM.printARowBetween(5,5, 4);
-        assertEquals("30", getStrippedConsole());
+        AM.printARowBetween(6,6, 4);
+        assertEquals("35", getStrippedConsole());
     }
 
     @Test
     void printARowBetweenFirstRow() {
-        AM.printARowBetween(0,5, 0);
-        assertEquals("1 2 3 4 5 6", getStrippedConsole());
+        AM.printARowBetween(0,6, 0);
+        assertEquals("1 2 3 4 5 6 7", getStrippedConsole());
     }
 
     @Test
     void printARowBetweenLastRow() {
-        AM.printARowBetween(0,5, 4);
-        assertEquals("25 26 27 28 29 30", getStrippedConsole());
+        AM.printARowBetween(0,6, 4);
+        assertEquals("29 30 31 32 33 34 35", getStrippedConsole());
     }
 
     @Test
     void printARowBetweenStart2() {
         AM.printARowBetween(0,4, 1);
-        assertEquals("7 8 9 10 11", getStrippedConsole());
+        assertEquals("8 9 10 11 12", getStrippedConsole());
     }
 
     @Test
     void printARowBetweenEnd4() {
-        AM.printARowBetween(2,5, 3);
-        assertEquals("21 22 23 24", getStrippedConsole());
+        AM.printARowBetween(2,6, 3);
+        assertEquals("24 25 26 27 28", getStrippedConsole());
     }
 
     /*If any of the parameters are invalid, the method should print out "Invalid parameter".*/
 
     @Test
     void invalidAnIndex() {
-        AM.printARowBetween(6,5, 0);
+        AM.printARowBetween(7,6, 0);
         assertEquals(ERROR, getStrippedConsole());
     }
 
     @Test
     void invalidAnotherIndex() {
-        AM.printARowBetween(0,6, 0);
+        AM.printARowBetween(0,7, 0);
         assertEquals(ERROR, getStrippedConsole());
     }
 

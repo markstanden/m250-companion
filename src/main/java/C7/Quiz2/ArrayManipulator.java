@@ -1,4 +1,5 @@
 package C7.Quiz2;
+import java.util.Arrays;
 import java.util.stream.Stream;
 
 public class ArrayManipulator {
@@ -31,6 +32,26 @@ public class ArrayManipulator {
                 .map(index -> myArray[aRow][index])
                 .map(value -> value.toString())
                 .reduce("", (out, value) -> out.concat(" ").concat(value));
+
+        System.out.println(output.trim());
+    }
+
+    /**
+     * The method should print out all even elements in column aCol of myArray,
+     * each followed by a space.
+     *
+     * If aCol is not a valid index the message "Invalid column" is printed instead.
+     */
+    public void printEvensInColumn(int aCol){
+        if(aCol >= myArray[0].length){
+            System.out.println("Invalid column");
+            return;
+        }
+        String output = Arrays.stream(myArray)
+                .map(row -> row[aCol])
+                .filter(value -> value % 2 == 0)
+                .map(value -> value.toString())
+                .reduce("", (result, value) -> result.concat(" ").concat(value));
 
         System.out.println(output.trim());
     }
