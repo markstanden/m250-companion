@@ -44,13 +44,21 @@ public class EmailManager {
     }
 
     private int getWeeklySum(int weekIndex) {
-        return Arrays.stream(emails[weekIndex])
-                .sum();
+        return Arrays.stream(emails[weekIndex]).sum();
 
     }
 
-    public void numOver(int threshold){
+    public void numOver(int threshold) {
+        long result = Arrays.stream(emails)
+                .mapToLong(weeklyEmails -> weeklyNumOver(threshold, weeklyEmails))
+                .sum();
+        System.out.println(result);
+    }
 
+    private long weeklyNumOver(int threshold, int[] weeklyEmails) {
+        return Arrays.stream(weeklyEmails)
+                .filter(dailyEmails -> dailyEmails > threshold)
+                .count();
     }
 
 }

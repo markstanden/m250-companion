@@ -24,7 +24,7 @@ public class EmailManagerNumOver extends EmailManagerTest{
     public void ouDataOver2(){
         EmailManager em = new EmailManager(ouEmails);
         em.numOver(2);
-        assertEquals("17", getStrippedConsole());
+        assertEquals("16", getStrippedConsole());
     }
 
     @Test
