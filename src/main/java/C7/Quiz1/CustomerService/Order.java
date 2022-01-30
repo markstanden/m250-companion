@@ -1,3 +1,5 @@
+package C7.Quiz1.CustomerService;
+
 public class Order {
     final private String accountName;
     final private double invoiceAmount;

@@ -1,3 +1,5 @@
+package C7.Quiz1.TimesTable;
+
 import BaseTests.ConsoleTest;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;

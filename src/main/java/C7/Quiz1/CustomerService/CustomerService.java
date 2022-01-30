@@ -1,3 +1,5 @@
+package C7.Quiz1.CustomerService;
+
 import java.util.Arrays;
 
 public class CustomerService {
@@ -18,8 +20,8 @@ public class CustomerService {
      * @param amount lower invoice amount limit
      */
     public void printNamesInvoicesMoreThan(double amount) {
-        long ordersAboveAmount = Arrays.stream(orders)// --> Stream<Order>
-                .filter(order -> order.getInvoiceAmount() > amount) // --> Stream<Order>
+        long ordersAboveAmount = Arrays.stream(orders)// --> Stream<C7.Quiz1.CustomerService.Order>
+                .filter(order -> order.getInvoiceAmount() > amount) // --> Stream<C7.Quiz1.CustomerService.Order>
                 .map(order -> order.getAccountName()) // --> Stream<String>
                 .peek(System.out::println) // --> Stream<String>
                 .count(); // --> long

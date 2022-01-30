@@ -1,3 +1,5 @@
+package C7.Quiz1.Converter;
+
 import java.util.stream.Stream;
 
 public class Converter

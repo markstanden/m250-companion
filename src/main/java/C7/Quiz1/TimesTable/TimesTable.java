@@ -1,3 +1,5 @@
+package C7.Quiz1.TimesTable;
+
 import java.util.stream.Stream;
 
 public class TimesTable
