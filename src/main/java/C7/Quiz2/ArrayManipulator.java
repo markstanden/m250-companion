@@ -43,7 +43,7 @@ public class ArrayManipulator {
      * If aCol is not a valid index the message "Invalid column" is printed instead.
      */
     public void printEvensInColumn(int aCol){
-        if(aCol >= myArray[0].length){
+        if(aCol >= myArray[0].length || aCol < 0){
             System.out.println("Invalid column");
             return;
         }

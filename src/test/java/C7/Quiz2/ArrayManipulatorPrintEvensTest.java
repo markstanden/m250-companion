@@ -37,11 +37,16 @@ class ArrayManipulatorPrintEvensTest extends ArrayManipulatorTestBase {
     }
 
    @Test
-    void invalidACol() {
+    void invalidAColTooHigh() {
         AM.printEvensInColumn(7);
         assertEquals(ERROR, getStrippedConsole());
     }
 
+    @Test
+    void invalidAColNegative() {
+        AM.printEvensInColumn(-1);
+        assertEquals(ERROR, getStrippedConsole());
+    }
 
 
 }
