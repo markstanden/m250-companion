@@ -1,4 +1,4 @@
-package C6.Activities.Act18;
+package C6.Activities.Act18and23;
 
 import java.util.HashMap;
 
@@ -29,5 +29,16 @@ public class Company
             return "No such office";
         }
         return occupant.getName();
+    }
+
+    /**
+     * method should return the office number of the employee whose name is given by the argument.
+     * If there is no employee by that name your method should return the string "No such employee".
+     */
+    public String getOfficeOf(String name){
+        return employees.keySet().stream()
+                .filter(office -> name.equals(employees.get(office).getName()))
+                .findFirst()
+                .orElse("No such employee");
     }
 }

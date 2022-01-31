@@ -1,4 +1,4 @@
-package C6.Activities.Act18;
+package C6.Activities.Act18and23;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -33,4 +33,17 @@ class CompanyTest {
         assertEquals("No such office", co.getOccupantName("hr"));
     }
 
+    @Test
+    void getOfficeOf() {
+        assertEquals("reception", co.getOfficeOf("Willis"));
+        assertEquals("accounts", co.getOfficeOf("Aria"));
+        assertEquals("director", co.getOfficeOf("Bran"));
+        assertEquals("payroll", co.getOfficeOf("John"));
+        assertEquals("complaints", co.getOfficeOf("Hodor"));
+    }
+
+    @Test
+    void noSuchEmployee() {
+        assertEquals("No such employee", co.getOfficeOf("William"));
+    }
 }

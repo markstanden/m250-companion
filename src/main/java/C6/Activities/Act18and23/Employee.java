@@ -1,4 +1,4 @@
-package C6.Activities.Act18;
+package C6.Activities.Act18and23;
 
 public class Employee {
     private final String NAME;
