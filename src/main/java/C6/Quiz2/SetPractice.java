@@ -1,3 +1,5 @@
+package C6.Quiz2;
+
 import java.util.HashSet;
 
 public class SetPractice {

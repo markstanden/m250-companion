@@ -1,3 +1,5 @@
+package C6.Quiz2;
+
 import BaseTests.ConsoleTest;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -25,13 +27,13 @@ class SetPracticeTest extends ConsoleTest {
     @Test
     void findSumOfValuesMoreThan99() {
         ts.findSumOfValuesMoreThan(99);
-        assertEquals(100, getStrippedConsole());
+        assertEquals("100", getStrippedConsole());
     }
 
     @Test
     void findSumOfValuesMoreThan98() {
         ts.findSumOfValuesMoreThan(98);
-        assertEquals(199, getStrippedConsole());
+        assertEquals("199", getStrippedConsole());
     }
 
     @Test

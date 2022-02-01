@@ -1,3 +1,5 @@
+package Kabaddi;
+
 import java.util.Arrays;
 
 public class Kabaddi

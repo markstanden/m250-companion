@@ -1,3 +1,5 @@
+package Kabaddi;
+
 import BaseTests.ConsoleTest;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
