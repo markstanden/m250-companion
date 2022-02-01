@@ -5,8 +5,8 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-public class TestTest {
-    C6.Activities.Act28.Test t = new C6.Activities.Act28.Test();
+public class Act28Test {
+    Act28 t = new Act28();
 
     @BeforeEach
     public void setUp() {
@@ -18,7 +18,7 @@ public class TestTest {
     }
 
     @Test
-    public void test(){
+    public void testHighest(){
         assertEquals(4.4, t.returnHighest());
     }
 

@@ -1,12 +1,12 @@
 import java.util.HashMap;
 import java.util.HashSet;
 
-public class TestyChildren
+public class Families
 {
     HashMap<Integer, HashSet<String>> children;
 
     //constructor
-    public TestyChildren()
+    public Families()
     {
         children = new HashMap<Integer, HashSet<String>>();
     }

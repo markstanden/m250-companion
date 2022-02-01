@@ -7,8 +7,8 @@ import java.util.stream.Stream;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-class TestySetTest extends ConsoleTest {
-    TestySet ts;
+class SetPracticeTest extends ConsoleTest {
+    SetPractice ts;
 
     @BeforeEach
     public void setUp() {
@@ -19,7 +19,7 @@ class TestySetTest extends ConsoleTest {
                 .limit(100)
                 .forEach(i -> testData.add(i));
 
-        ts = new TestySet(testData);
+        ts = new SetPractice(testData);
     }
 
     @Test

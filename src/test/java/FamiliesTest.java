@@ -7,9 +7,9 @@ import java.util.stream.Stream;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-class TestyChildrenTest extends ConsoleTest {
+class FamiliesTest extends ConsoleTest {
 
-    TestyChildren tc;
+    Families tc;
 
     @BeforeEach
     public void setUp() {
@@ -20,7 +20,7 @@ class TestyChildrenTest extends ConsoleTest {
                 .limit(100)
                 .forEach(i -> testData.add(i));
 
-        tc = new TestyChildren();
+        tc = new Families();
 
         HashSet<String> three = new HashSet<>();
         three.add("Brian");

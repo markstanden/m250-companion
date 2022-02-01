@@ -3,24 +3,24 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-class TestyTest extends ConsoleTest {
+class SmallStringTest extends ConsoleTest {
     @Test
     void cat() {
-        Testy t = new Testy();
+        SmallString t = new SmallString();
         t.smallString("   CAT   ");
         assertEquals("a", getStrippedConsole(), "cat");
     }
 
     @Test
     void elephant() {
-        Testy t = new Testy();
+        SmallString t = new SmallString();
         t.smallString(" ELEPHANT ");
         assertEquals("lephan", getStrippedConsole(), "elephant");
     }
 
     @Test
     void be() {
-        Testy t = new Testy();
+        SmallString t = new SmallString();
         t.smallString("  BE  ");
         assertEquals("String too short", getStrippedConsole(), "cat");
     }

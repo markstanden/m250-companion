@@ -1,4 +1,4 @@
-public class Testy
+public class SmallString
 {
     // Write your smallString(String) method here.
     public void smallString(String text){

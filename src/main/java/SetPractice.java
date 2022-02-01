@@ -1,16 +1,14 @@
-import org.w3c.dom.ls.LSOutput;
-
 import java.util.HashSet;
 
-public class TestySet {
+public class SetPractice {
 
     public HashSet<Integer> mySet;
 
-    public TestySet() {
+    public SetPractice() {
         mySet = new HashSet<Integer>();
     }
 
-    public TestySet(HashSet<Integer> setty) {
+    public SetPractice(HashSet<Integer> setty) {
         mySet = new HashSet<Integer>(setty);
     }
 

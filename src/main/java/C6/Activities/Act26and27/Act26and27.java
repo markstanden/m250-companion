@@ -1,13 +1,11 @@
 package C6.Activities.Act26and27;
 
-import org.w3c.dom.ls.LSOutput;
-
 import java.util.HashMap;
 
-public class Test {
+public class Act26and27 {
     public HashMap<Integer, String> myMap;
 
-    public Test() {
+    public Act26and27() {
         myMap = new HashMap<>();
     }
 

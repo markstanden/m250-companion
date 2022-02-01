@@ -6,9 +6,9 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-class TestTest extends ConsoleTest {
+class Act26and27Test extends ConsoleTest {
 
-    C6.Activities.Act26and27.Test t = new C6.Activities.Act26and27.Test();
+    Act26and27 t = new Act26and27();
 
     @BeforeEach
     public void setUp() {
@@ -46,12 +46,12 @@ class TestTest extends ConsoleTest {
     void populateMapNew() {
         t.populateMap(5, "Test5");
         t.populateMap(0, "Test0");
-        t.populateMap(-1, "Test-1");
+        t.populateMap(-1, "Act26and27-1");
         t.populateMap(10000, "Test10000");
 
         assertEquals("Test5", t.myMap.get(5));
         assertEquals("Test0", t.myMap.get(0));
-        assertEquals("Test-1", t.myMap.get(-1));
+        assertEquals("Act26and27-1", t.myMap.get(-1));
         assertEquals("Test10000", t.myMap.get(10000));
     }
 
