@@ -1,3 +1,5 @@
+package C6.Activities.Act31;
+
 import java.util.HashMap;
 import java.util.HashSet;
 
@@ -12,8 +14,18 @@ public class Families
     }
 
 
+    /**
+     * return the number of houses that contain more than three children.
+     */
+    public long moreThanThree(){
+        return children.values().stream()
+                .filter(occupants -> occupants.size() >= 3)
+                .count();
+    }
 
-    // Write your method moreThan3Children() here
+    /**
+     * print the number of houses that contain more than three children.
+     */
     public void moreThan3Children(){
         long moreThanThree = children.values().stream()
                 .filter(occupants -> occupants.size() >= 3)

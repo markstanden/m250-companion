@@ -1,4 +1,7 @@
+package C6.Activities.Act31;
+
 import BaseTests.ConsoleTest;
+import C6.Activities.Act31.Families;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
@@ -53,7 +56,7 @@ class FamiliesTest extends ConsoleTest {
         tc.children.put(2, two);
 
         tc.moreThan3Children();
-
+        assertEquals(2, tc.moreThanThree());
         assertEquals("2 houses have three or more children", getStrippedConsole());
     }
 
@@ -66,7 +69,7 @@ class FamiliesTest extends ConsoleTest {
         tc.children.put(2, two);
 
         tc.moreThan3Children();
-
+        assertEquals(1, tc.moreThanThree());
         assertEquals("1 houses have three or more children", getStrippedConsole());
     }
 
@@ -79,14 +82,14 @@ class FamiliesTest extends ConsoleTest {
         tc.children.put(2, two);
 
         tc.moreThan3Children();
-
+        assertEquals(1, tc.moreThanThree());
         assertEquals("1 houses have three or more children", getStrippedConsole());
     }
 
     @Test
     void moreThan3ChildrenNone() {
         tc.moreThan3Children();
-
+        assertEquals(0, tc.moreThanThree());
         assertEquals("No houses have three or more children", getStrippedConsole());
     }
 }
