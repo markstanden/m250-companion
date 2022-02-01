@@ -12,7 +12,9 @@ class TriangleTest extends ConsoleTest {
     void perimeterTest() {
         double a = 3.0;
         double b = 4.0;
-        assertEquals(12.0, Triangle.perimeter(a, b));
+        // hyp = 5.0
+        Triangle.perimeter(a, b);
+        assertEquals("12.0", getStrippedConsole());
     }
 
 }
