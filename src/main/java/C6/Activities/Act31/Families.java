@@ -23,6 +23,15 @@ public class Families
                 .count();
     }
 
+
+    /**
+     *  return the total number of children who live in the street.
+     */
+    public int totalNumChildren(){
+        return 0;
+    }
+
+
     /**
      * print the number of houses that contain more than three children.
      */

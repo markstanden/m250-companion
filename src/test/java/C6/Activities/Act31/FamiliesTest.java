@@ -92,4 +92,25 @@ class FamiliesTest extends ConsoleTest {
         assertEquals(0, tc.moreThanThree());
         assertEquals("No houses have three or more children", getStrippedConsole());
     }
+
+
+    @Test
+    void totalNumChildren() {
+        assertEquals(5, tc.totalNumChildren());
+    }
+
+    @Test
+    void totalNumChildrenEmpty() {
+        Families tc2 = new Families();
+        assertEquals(0, tc2.totalNumChildren());
+    }
+
+    @Test
+    void totalNumChildrenOne() {
+        Families tc3 = new Families();
+        HashSet<String> test = new HashSet<>();
+        test.add("Johnny");
+        tc3.children.put(1, test);
+        assertEquals(1, tc3.totalNumChildren());
+    }
 }
