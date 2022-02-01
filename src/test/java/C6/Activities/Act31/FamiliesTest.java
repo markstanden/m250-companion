@@ -1,7 +1,7 @@
 package C6.Activities.Act31;
 
 import BaseTests.ConsoleTest;
-import C6.Activities.Act31.Families;
+
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
