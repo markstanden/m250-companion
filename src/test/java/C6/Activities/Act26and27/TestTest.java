@@ -1,16 +1,18 @@
-package C6.Activities.Act26;
+package C6.Activities.Act26and27;
 
+import BaseTests.ConsoleTest;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-class TestTest {
+class TestTest extends ConsoleTest {
 
-    C6.Activities.Act26.Test t = new C6.Activities.Act26.Test();
+    C6.Activities.Act26and27.Test t = new C6.Activities.Act26and27.Test();
 
     @BeforeEach
-    void setUp() {
+    public void setUp() {
+        super.setUp();
         t.populateMap(1, "Test1");
         t.populateMap(2, "Test2");
         t.populateMap(3, "Test3");
@@ -51,5 +53,23 @@ class TestTest {
         assertEquals("Test0", t.myMap.get(0));
         assertEquals("Test-1", t.myMap.get(-1));
         assertEquals("Test10000", t.myMap.get(10000));
+    }
+
+    @Test
+    void findEntry1() {
+        t.findEntry(1);
+        assertEquals("Test1", getStrippedConsole());
+    }
+
+    @Test
+    void findEntry4() {
+        t.findEntry(4);
+        assertEquals("Test4", getStrippedConsole());
+    }
+
+    @Test
+    void findEntryNegative() {
+        t.findEntry(100);
+        assertEquals("not found", getStrippedConsole());
     }
 }

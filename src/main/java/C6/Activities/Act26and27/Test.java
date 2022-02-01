@@ -1,4 +1,6 @@
-package C6.Activities.Act26;
+package C6.Activities.Act26and27;
+
+import org.w3c.dom.ls.LSOutput;
 
 import java.util.HashMap;
 
@@ -19,6 +21,21 @@ public class Test {
      * the associated value should remain unchanged.
      */
     public void populateMap(Integer key, String value) {
+        myMap.putIfAbsent(key, value);
+    }
 
+    /**
+     * The method first checks if the specified Integer parameter
+     * is a key in the map, myMap. If it is,
+     * the associated value is printed out,
+     * otherwise the message "not found" is printed out.
+     * @param key
+     */
+    public void findEntry(Integer key){
+        String result = "not found";
+        if(myMap.containsKey(key)){
+            result = myMap.get(key);
+        }
+        System.out.println(result);
     }
 }
