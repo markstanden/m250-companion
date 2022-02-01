@@ -1,8 +1,8 @@
-public class ArrayTest {
+public class ArrayFromTo {
     private String[] myArray;
 
     // constructor sets up some names in the array
-    public ArrayTest()
+    public ArrayFromTo()
     {
         myArray =  new String[8];
         myArray[0] = "Tatjana";
