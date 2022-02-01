@@ -16,5 +16,4 @@ class TriangleTest extends ConsoleTest {
         Triangle.perimeter(a, b);
         assertEquals("12.0", getStrippedConsole());
     }
-
 }

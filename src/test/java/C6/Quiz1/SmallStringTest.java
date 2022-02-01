@@ -1,3 +1,5 @@
+package C6.Quiz1;
+
 import BaseTests.ConsoleTest;
 import org.junit.jupiter.api.Test;
 

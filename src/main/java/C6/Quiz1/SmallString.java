@@ -1,3 +1,5 @@
+package C6.Quiz1;
+
 public class SmallString
 {
     // Write your smallString(String) method here.
