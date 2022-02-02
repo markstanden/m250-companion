@@ -1,5 +1,6 @@
 package C7.Quiz2.ArrayManipulator;
 import java.util.Arrays;
+import java.util.stream.IntStream;
 import java.util.stream.Stream;
 
 public class ArrayManipulator {
@@ -21,16 +22,17 @@ public class ArrayManipulator {
      * @param aRow
      */
     public void printARowBetween(int anIndex, int anotherIndex, int aRow) {
-        if (aRow >= myArray.length || anotherIndex >= myArray[aRow].length || anotherIndex < anIndex) {
+        if (aRow >= myArray.length
+                || anotherIndex >= myArray[aRow].length
+                || anotherIndex < anIndex) {
             System.out.println("Invalid parameter");
             return;
         }
 
         //array[Row][Column]
-        String output = Stream.iterate(anIndex, i -> i + 1)
-                .limit(anotherIndex - anIndex + 1)
+        String output = IntStream.rangeClosed(anIndex, anotherIndex)
                 .map(index -> myArray[aRow][index])
-                .map(value -> value.toString())
+                .mapToObj(value -> String.valueOf(value))
                 .reduce("", (out, value) -> out.concat(" ").concat(value));
 
         System.out.println(output.trim());
