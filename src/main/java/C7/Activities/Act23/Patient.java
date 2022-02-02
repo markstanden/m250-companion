@@ -1,4 +1,4 @@
-package ClinicalTrial;
+package C7.Activities.Act23;
 
 public class Patient {
     private char gender;

@@ -1,7 +1,7 @@
 package C7.Quiz1.CustomerService;
 
 import BaseTests.ConsoleTest;
-import C7.Quiz1.CustomerService.CustomerService;
+
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;

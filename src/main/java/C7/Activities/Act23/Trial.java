@@ -1,4 +1,4 @@
-package ClinicalTrial;
+package C7.Activities.Act23;
 
 import java.util.Random;
 import java.util.Arrays;
@@ -102,7 +102,7 @@ public class Trial {
     }
 
     private void printResultHeader() {
-        System.out.println("ClinicalTrial.Patient\t\tbefore\tafter");
+        System.out.println("Patient\t\tbefore\tafter");
     }
 
     /**
