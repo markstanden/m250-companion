@@ -1,7 +1,5 @@
 package C7.Activities.Act20.Kabaddi;
 
-import C7.Activities.Act23.Patient;
-
 import java.util.Arrays;
 import java.util.regex.MatchResult;
 import java.util.regex.Matcher;
