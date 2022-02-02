@@ -11,15 +11,15 @@ public class ArrayManipulator {
     }
 
     /**
-     * The method should print out the elements in the row of myArray given by aRow,
+     * The method prints out the elements in the row of myArray given by aRow,
      * from index anIndex to index anotherIndex (inclusive).
      * The values should be printed on a single line, with a space after each.
      * <p>
      * If any of the parameters are invalid, the method should print out "Invalid parameter".
      *
-     * @param anIndex
-     * @param anotherIndex
-     * @param aRow
+     * @param anIndex       The index of the first item to display
+     * @param anotherIndex  The index of the last item to display
+     * @param aRow          The row to take the data from
      */
     public void printARowBetween(int anIndex, int anotherIndex, int aRow) {
         if (aRow >= myArray.length
