@@ -1,7 +1,7 @@
+package ClinicalTrial;
+
 import java.util.Random;
 import java.util.Arrays;
-import java.util.stream.Collectors;
-import java.util.stream.IntStream;
 import java.util.stream.Stream;
 
 public class Trial {
@@ -102,7 +102,7 @@ public class Trial {
     }
 
     private void printResultHeader() {
-        System.out.println("Patient\t\tbefore\tafter");
+        System.out.println("ClinicalTrial.Patient\t\tbefore\tafter");
     }
 
     /**

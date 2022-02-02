@@ -1,3 +1,5 @@
+package ClinicalTrial;
+
 public class Patient {
     private char gender;
     private int cLevel;

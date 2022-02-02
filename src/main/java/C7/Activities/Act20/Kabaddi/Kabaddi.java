@@ -1,6 +1,7 @@
-package Kabaddi;
+package C7.Activities.Act20.Kabaddi;
 
 import java.util.Arrays;
+import java.util.regex.Pattern;
 
 public class Kabaddi
 {
@@ -13,9 +14,15 @@ public class Kabaddi
     }
 
     public void printTeamSurnamesFun(String allNames) {
+        //"Name1 Surname1, Name2 Surname2, Name3 Surname3"
+        Arrays.stream(allNames.split(". *,"))
+                .forEach(System.out::println);
+    }
+
+    public void printTeamSurnamesFunSimple(String allNames) {
         Arrays.stream(allNames.split(","))
                 .map(name -> name.trim())
                 .map(name -> name.split(" ")[1])
-                .forEach(surname -> System.out.println(surname));
+                .forEach(System.out::println);
     }
 }

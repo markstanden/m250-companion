@@ -1,6 +1,7 @@
-package Kabaddi;
+package C7.Activities.Act20.Kabaddi;
 
 import BaseTests.ConsoleTest;
+import C7.Activities.Act20.Kabaddi.Kabaddi;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
@@ -13,6 +14,7 @@ public class KabaddiTest extends ConsoleTest {
     public void setUp() {
         super.setUp();
         kabaddi = new Kabaddi();
+
     }
 
     @Test
@@ -22,8 +24,14 @@ public class KabaddiTest extends ConsoleTest {
     }
 
     @Test
-    public void printTeamNamesFunTest() {
+    public void printTeamNamesFunRegexSplitTest() {
         kabaddi.printTeamSurnamesFun("Name1 Surname1, Name2 Surname2, Name3 Surname3");
+        assertEquals("Surname1\nSurname2\nSurname3", getStrippedConsole());
+    }
+
+    @Test
+    public void printTeamNamesFunSimpleSplitTest() {
+        kabaddi.printTeamSurnamesFunSimple("Name1 Surname1, Name2 Surname2, Name3 Surname3");
         assertEquals("Surname1\nSurname2\nSurname3", getStrippedConsole());
     }
 }
