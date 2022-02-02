@@ -1,7 +1,6 @@
 package C7.Activities.Act20.Kabaddi;
 
 import java.util.Arrays;
-import java.util.regex.Pattern;
 
 public class Kabaddi
 {
