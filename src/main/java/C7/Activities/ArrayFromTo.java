@@ -1,3 +1,5 @@
+package C7.Activities;
+
 public class ArrayFromTo {
     private String[] myArray;
 
