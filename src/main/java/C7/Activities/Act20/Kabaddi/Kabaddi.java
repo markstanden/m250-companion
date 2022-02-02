@@ -3,6 +3,7 @@ package C7.Activities.Act20.Kabaddi;
 import C7.Activities.Act23.Patient;
 
 import java.util.Arrays;
+import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 public class Kabaddi
@@ -17,10 +18,11 @@ public class Kabaddi
 
     public void printTeamSurnamesFun(String allNames) {
         //"Name1 Surname1, Name2 Surname2, Name3 Surname3"
-        Pattern p = Pattern.compile("[ ]*[, ]");
-        Arrays.stream(p.split(allNames))
-        //Arrays.stream(allNames.split("[ ]*[, ]"))
-                .forEach(System.out::println);
+        Pattern p = Pattern.compile("\\b(\\w+)(?=,|$)");
+        Matcher m = p.matcher(allNames);
+        m.results()
+                .map(result -> result.group())
+                .forEach(surname -> System.out.println(surname));
     }
 
     public void printTeamSurnamesFunSimple(String allNames) {
