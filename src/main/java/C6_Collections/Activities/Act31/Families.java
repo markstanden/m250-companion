@@ -2,24 +2,35 @@ package C6_Collections.Activities.Act31;
 
 import java.util.HashMap;
 import java.util.HashSet;
+import java.util.function.Predicate;
 
 public class Families {
     HashMap<Integer, HashSet<String>> children;
 
     //constructor
     public Families() {
-        children = new HashMap<Integer, HashSet<String>>();
+        children = new HashMap<>();
     }
 
     /**
      * return the number of houses that contain more than three children.
      */
     public long moreThanThree() {
-        return children.values().stream()
+        return moreThan(3);
+        /*return children.values().stream()
                 .filter(occupants -> occupants.size() >= 3)
+                .count();*/
+    }
+
+    public long moreThan(int minAge) {
+        return children.values().stream()
+                .filter(minChildren(minAge))
                 .count();
     }
 
+    private Predicate<HashSet<String>> minChildren(int minimum) {
+        return occupants -> occupants.size() >= minimum;
+    }
 
     /**
      * return the total number of children who live in the street.
@@ -36,8 +47,8 @@ public class Families {
         */
 
         return children.values().stream()
-                .mapToInt(set -> set.size())
-                .reduce(0, (totalChildren, childrenAtAddress) -> totalChildren + childrenAtAddress);
+                .mapToInt(HashSet::size)
+                .sum();
     }
 
 
@@ -46,11 +57,13 @@ public class Families {
      */
     public void moreThan3Children() {
         long moreThanThree = children.values().stream()
-                .filter(occupants -> occupants.size() >= 3)
+                .filter(minChildren(3))
                 .count();
 
         String result = moreThanThree > 0 ? String.valueOf(moreThanThree) : "No";
         System.out.println(result + " houses have three or more children");
     }
+
+
 
 }
