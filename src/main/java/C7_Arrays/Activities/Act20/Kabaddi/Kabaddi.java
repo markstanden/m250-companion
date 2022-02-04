@@ -28,8 +28,8 @@ public class Kabaddi
          */
         Pattern p = Pattern.compile("\\b(\\w+)(?=,|$)");
         Matcher m = p.matcher(allNames);
-        m.results()
-                .map(MatchResult::group)
+        m.results()                                 //Stream<MatchResult>
+                .map(MatchResult::group)            //Stream<String>
                 .forEach(System.out::println);
     }
 
