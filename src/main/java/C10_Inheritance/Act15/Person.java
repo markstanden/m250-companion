@@ -1,4 +1,4 @@
-package C9_Inheritance.Act15;
+package C10_Inheritance.Act15;
 
 public class Person {
     private String name;
